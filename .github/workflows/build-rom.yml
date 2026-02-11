@@ -13,9 +13,9 @@ jobs:
       - name: Install and Build
         run: |
           npm install
-          node index.js transpile test
+          node index.js examples/test/project/startup.choice
       - name: Upload ROM
         uses: actions/upload-artifact@v4
         with:
           name: Sega-Genesis-ROM
-          path: ./examples/test/*.bin
+          path: ./*.bin
