@@ -10,13 +10,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '16'
-      - name: Install ImageMagick
+      - name: Install Tools
         run: sudo apt-get update && sudo apt-get install -y imagemagick
-      - name: Fix and Verify Folders
-        run: |
-          mkdir -p examples/test/imagemagick
-          echo "Checking directories..."
-          ls -R examples/test/
       - name: Install and Build
         run: |
           npm install
@@ -25,6 +20,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Sega-Genesis-ROM
-          path: |
-            ./examples/test/*.bin
-            ./*.bin
+          path: ./*.bin
