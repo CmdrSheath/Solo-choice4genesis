@@ -6,12 +6,14 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-      - name: Setup Node.js
-        uses: actions/checkout@v3
-      - name: Install Compiler
-        run: npm install
-      - name: Build ROM
-        run: node index.js ./examples/test/project/startup.choice
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Install and Build
+        run: |
+          npm install
+          node index.js ./examples/test/project/startup.choice
       - name: Upload ROM
         uses: actions/upload-artifact@v3
         with:
