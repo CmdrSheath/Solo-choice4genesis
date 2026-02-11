@@ -10,14 +10,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '16'
-      - name: Install Tools
+      - name: Install ImageMagick
         run: sudo apt-get update && sudo apt-get install -y imagemagick
       - name: Install and Build
         run: |
           npm install
-          node index.js transpile test
+          node index.js transpile examples/test --project-dir ./examples/test/project
       - name: Upload ROM
         uses: actions/upload-artifact@v4
         with:
           name: Sega-Genesis-ROM
-          path: ./*.bin
+          path: |
+            ./examples/test/*.bin
+            ./*.bin
