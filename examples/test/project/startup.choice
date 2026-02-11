@@ -10,7 +10,10 @@ The screen flickers to life on the Sega Genesis. A single prism rotates in the c
 *choice
   #Check system status.
     The CPU is operating at 7.61 MHz. Everything is optimal.
-    *ending
+    *goto end_scene
   #Initiate a test sequence.
     The prism glows bright cyan. The test is a success.
-    *ending
+    *goto end_scene
+
+*label end_scene
+The experiment is complete.
