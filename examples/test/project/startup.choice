@@ -1,0 +1,12 @@
+*title "The Shifting Prism"
+*author "Jon and Jewel"
+
+*scene_list
+  startup
+
+The screen flickers to life on the Sega Genesis. 
+
+*choice
+  #Start Game
+    Success!
+    *finish
