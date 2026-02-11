@@ -1,6 +1,9 @@
 *title The Shifting Prism
 *author Jon and Jewel
 
+*scene_list
+  startup
+
 *create player_name "Jon"
 
 The screen flickers to life on the Sega Genesis. A single prism rotates in the center of the void. 
@@ -10,10 +13,7 @@ The screen flickers to life on the Sega Genesis. A single prism rotates in the c
 *choice
   #Check system status.
     The CPU is operating at 7.61 MHz. Everything is optimal.
-    *goto end_scene
+    *finish
   #Initiate a test sequence.
     The prism glows bright cyan. The test is a success.
-    *goto end_scene
-
-*label end_scene
-The experiment is complete.
+    *finish
