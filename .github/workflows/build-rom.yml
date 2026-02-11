@@ -12,6 +12,11 @@ jobs:
           node-version: '16'
       - name: Install ImageMagick
         run: sudo apt-get update && sudo apt-get install -y imagemagick
+      - name: Fix and Verify Folders
+        run: |
+          mkdir -p examples/test/imagemagick
+          echo "Checking directories..."
+          ls -R examples/test/
       - name: Install and Build
         run: |
           npm install
