@@ -10,14 +10,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '16'
-      - name: Install Graphics Tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y imagemagick
+      - name: Install ImageMagick
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
       - name: Install and Build
         run: |
           npm install
-          mkdir -p examples/test/imagemagick
           node index.js transpile test
       - name: Upload ROM
         uses: actions/upload-artifact@v4
