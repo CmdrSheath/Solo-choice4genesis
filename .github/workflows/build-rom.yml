@@ -13,7 +13,7 @@ jobs:
       - name: Install and Build
         run: |
           npm install
-          node index.js transpile examples/test
+          node index.js transpile test
       - name: Upload ROM
         uses: actions/upload-artifact@v4
         with:
@@ -21,3 +21,4 @@ jobs:
           path: |
             ./examples/test/*.bin
             ./*.bin
+
