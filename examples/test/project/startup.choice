@@ -9,8 +9,8 @@ The screen flickers to life on the Sega Genesis. A single prism rotates in the c
 
 *choice
   #Check system status.
-    The Motorola 68000 CPU is operating at 7.61 MHz. Everything is optimal.
-    *finish
+    The CPU is operating at 7.61 MHz. Everything is optimal.
+    *ending
   #Initiate a test sequence.
-    The prism glows bright cyan. The test is a success. We are live on the hardware.
-    *finish
+    The prism glows bright cyan. The test is a success.
+    *ending
