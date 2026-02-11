@@ -4,11 +4,9 @@
 *scene_list
   startup
 
-*create player_name "Jon"
-
 The screen flickers to life on the Sega Genesis. A single prism rotates in the center of the void. 
 
-"System initialized," a calm voice speaks. "Welcome back, ${player_name}."
+"System initialized," a calm voice speaks. "Welcome back, Pilot."
 
 *choice
   #Check system status.
